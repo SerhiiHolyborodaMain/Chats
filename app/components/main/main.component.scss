@@ -1,0 +1,379 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+  $blue: #74b9ff;
+$base-color: #f5f5f5;
+$answer:#3c4153;
+$messageBackground:#fafafa;
+
+.Name{
+
+}
+ 
+
+.profile-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+  }
+
+ 
+.chat{
+    display: flex;
+    flex-direction: column;
+}
+ 
+ 
+ 
+
+ 
+ 
+ 
+.chat-mate-hover:hover{
+    background: $blue;
+    cursor: pointer;
+    p,
+    h6,
+    .time {
+      color: #fff !important;
+    }
+ }
+ 
+
+
+.container{
+    margin: 60px auto;
+    padding: 0;
+    border-radius:7px;
+    display: flex;
+        flex-direction: row;
+    
+    &__side{
+        display: flex;
+        flex-direction: column;
+    width:30%;
+    }
+    &__main{
+    width:70%;
+    } 
+}
+
+ 
+.header{
+    
+   
+    background-color:$base-color ;
+     
+    &__user-photo{
+        background: #eee;
+        padding: 10px 15px;
+        border-radius: 7px;
+     
+    &__avatar{
+        width: 50px;
+        height: 50px;
+        border-radius: 40px;
+    }
+    &__avatar-outline{
+         
+    }
+    }
+    &__search{
+        background: #fafafa;
+        padding: 20px 13px;
+         
+        &__input{
+              
+             height: 40px;
+            background: url(../../../assets/images/searchLogo.png) no-repeat scroll 7px 1px  ;
+padding-left:30px;
+        }
+    }
+}
+
+ 
+ 
+
+.content{
+    
+    background-color:#ffffff;
+}
+
+ .chats{
+ 
+     &__text{
+         color:#9cd3e5;
+     }
+     &__dialogues{
+
+         
+        &__chat-mate{
+            padding: 10px 15px;
+      display: flex;
+      vertical-align: baseline;
+      background: #fff;
+      transition: .3s ease;
+      border-bottom: 2px solid #d3d3d3;
+        } 
+       
+        &__profile-image{
+            width: 50px;
+            height: 50px;
+            border-radius: 40px;
+        }
+        &__text{
+            margin-left: 12px;
+            width: 70%;
+             
+        }
+            &__name {
+              margin-top: 6px;
+              margin-bottom: 0;
+            }
+            
+            &__text-muted {
+              margin: 0;
+            }
+
+            
+    }
+     
+ }
+ 
+
+
+ .search-wrapper{
+    background: #fff;
+    border-radius: 40px;
+   
+ 
+ }
+ 
+ 
+
+ 
+  @keyframes fadeIn {
+      0% {
+          opacity: 0;
+      }
+      100% {
+          opacity: 1;
+      }
+  }
+  
+  
+ 
+ 
+ .forMessages{
+  overflow:   scroll ;
+  overflow-x: hidden;
+  height:600px;
+ 
+ }
+ 
+ 
+ 
+ 
+  
+  //  input & send message
+  
+  .mesages{
+    border-left: 2px solid #d3d3d3;
+    &__chat{
+      display: flex;
+      flex-direction: column;
+      position: relative;
+  &__right {
+    border-radius: 25px;
+    padding: 10px 14px;
+    animation: fadeIn 1s ease-in;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background: #dfdfdf;
+    width: fit-content;
+    margin-right: 5px;
+  }
+  &__left{
+  
+    background:#3c4252;
+       animation: fadeIn 1s ease-in;
+       width: fit-content;
+          padding: 10px 14px;
+ 
+    // margin: 15px 15px;
+    margin-left: 5px;
+    border-radius: 25px;
+   color: white;
+      }
+    }
+
+    &__friendInfo__Name{
+      font: bold  large serif;
+    }
+  &__friendInfo__information{
+    border-bottom: 2px solid #d3d3d3;
+    padding: 10px 15px;
+    display: flex;
+    vertical-align: baseline;
+    background: #eeee;
+    transition: .3s ease;
+    
+    &--grey {
+      background: #eee;
+    }
+    
+    .text {
+      margin-left: 12px;
+      width: 70%;
+      
+      h6 {
+        margin-top: 6px;
+        margin-bottom: 0;
+      }
+      
+      p {
+        margin: 0;
+      }
+    }
+    
+    .time {
+      color: grey;
+    }
+    
+    &--onhover:hover {
+      background: $blue;
+      cursor: pointer;
+      
+      p,
+      h6,
+      .time {
+        color: #fff !important;
+      }
+    }
+  }
+}
+  
+  .user__input {
+    top: 0;
+      
+    background: #eee;
+    display: flex;
+    align-items: baseline;
+    padding: 10px 15px;
+    align-items: center;
+     
+    bottom: 0;
+    
+    input {
+      margin: 0 10px;
+      padding: 6px 2px;
+    }
+    
+    i {
+      color: grey;
+      font-size: 30px;
+      vertical-align: middle;
+      
+      &:last-of-type {
+        margin-left: 25px;
+      }
+    }
+  }
+  input {
+    border: none;
+    border-radius: 30px;
+    width: 80%;
+  
+    &::placeholder {
+      color: #e3e3e3;
+      font-weight: 300;
+      margin-left: 20px;
+    }
+  
+    &:focus {
+      outline: none;
+    }
+  }
+  .mesages__chats{
+    display: flex;
+    flex-direction: column;
+ margin-top: 30px;
+  }
+  .datel{
+  
+    margin-left: 15px;
+    margin-top: 10px;
+    font-size: 13px;
+  }
+  .dater{
+  font-size: 13px;
+    margin-top: 10px;
+    margin-right: 15px;
+  }
+ 
+ 
+ 
+  .position{
+    display: flex;
+    align-items: flex-end;
+  }
+  // @media screen and (min-width: 1462px) , (max-width: 1920px) {
+  //   .dater{
+  //     margin-top: 10px;
+  //         margin-left:95%;
+  //       }
+      
+  // }
+  // @media screen and (min-width: 1301px) , (max-width: 1400px) {
+  //   .dater{
+  //     margin-top: 10px;
+  //         margin-left:90%;
+  //       }
+      
+  // }
+  // @media    (max-width: 1900px) {
+  //   .dater{
+  
+  //         margin-left:90%;
+  //       }
+  //       .mesages__chat__right{
+  //         // margin-top: 10px;
+  //         // margin-left:90%
+  //       }
+  //     }
+  // @media    (max-width: 1600px) {
+  //   .dater{
+  //     margin-top: 10px;
+  //         margin-left:86%;
+  //       }
+  //     }
+  // @media    (max-width: 1300px) {
+  //   .dater{
+  //     margin-top: 10px;
+  //         margin-left:83%;
+  //       }
+  //     }
+  //     @media    (max-width: 1080px) {
+  //       .dater{
+  //         margin-top: 10px;
+  //             margin-left:80%;
+  //           }
+  //         }
+  // @media    (max-width: 850px) {
+  //   .dater{
+  //     margin-top: 10px;
+  //         margin-left:75%;
+  //       }
+  //     }
+  // @media   (max-width: 764px) {
+  //   .dater{
+  //     margin-top: 10px;
+  //         margin-left:70%;
+  //       }
+      
+  // }

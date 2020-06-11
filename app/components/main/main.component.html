@@ -1,0 +1,207 @@
+ <div class="container">
+
+   <div class="container__side">
+
+     <header class="header">
+       <div class="header__user-photo ">
+         <img class="header__user-photo__avatar" src="../../../assets/images/avatar.png" alt="user-avatar">
+         <div class="header__user-photo__avatar-outline"></div>
+
+       </div>
+
+       <div class="header__search">
+         <div class="search-wrapper">
+         
+           <input placeholder="Search or start new chat" value="" type="text" class="header__search__input" (input)="onSearchChange($event.target.value)">
+
+         </div>
+       </div>
+     </header>
+
+
+
+
+
+     <div class="content">
+       <div class="chats">
+         <div class="chats__text">Chats</div>
+        
+         <div class="chats__dialogues"  *ngFor="let item of allD; let i  = index">
+          <div class="chats__dialogues__chat-mate  chat-mate-hover" *ngIf=" Friends[i]  "   id="0" (click)="userChoosen($event.target.id)"   id="true{{i}}">
+            <img class="chats__dialogues__profile-image"
+              src="{{item[3]}}" alt="" id="true{{i}}"  >
+            <div class="chats__dialogues__text" id="true{{i}}">
+              <h6 class="chats__dialogues__name" id="true{{i}}"   >{{Friends[i] }} </h6>
+               <p class="chats__dialogues__text-muted" id="true{{i}}"    > {{ item[0] }} </p>  
+               <!-- <p class="chats__dialogues__text-muted" id="true{{i}}"  *ngIf="true1" > {{    item   }} </p>  
+               <p class="chats__dialogues__text-muted" id="true{{i}}"  *ngIf="true2" >   item    </p> 
+               <p class="chats__dialogues__text-muted" id="true{{i}}"  *ngIf="true3" >  item   </p> 
+               <p class="chats__dialogues__text-muted" id="true{{i}}"  *ngIf="true4" >   item    </p>  -->
+               <!-- ngIf="true1" -->
+            </div>
+            <span class="time" id="0">{{item[2]}}</span>
+          </div>
+         
+
+
+         </div>
+       </div>
+     </div>
+
+   </div>
+
+
+
+
+   <div class="container__main">
+     <main class="mesages">
+       
+<!--  -->
+      
+       <!--  -->
+       <div class="mesages__friendInfo">
+         <div class="mesages__friendInfo__information">
+           <img class="profile-image" src="{{allD[x][3]}}"
+             alt="">
+           <div class="text">
+             <h6 class="mesages__friendInfo__Name">{{allD[x][1]}}</h6>
+            
+           </div>
+           <span class="date">
+             
+
+           </span>
+         </div>
+       </div>
+
+
+       <div class="mesages__chat">
+       
+             
+            <div class="forMessages"   >
+               
+               
+        
+
+      <div *ngFor="let item of dialogues0; let i = index" > 
+        <div class="if" *ngIf="true0" > 
+          <div class="mesages__chats position"   >
+         
+            <span class= "mesages__chat__right  "  >  {{  item[0]  }}   </span>  
+            <span class="dater" >   {{  item[1]  }}   </span>  
+       </div>
+          <div class="mesages__chats  "  >
+          
+            <span class= "mesages__chat__left"  > {{  item[2]  }}    </span>  
+            <span class="datel" >   {{  item[3]  }}  </span>  
+           
+       </div>
+      
+    
+  </div>
+  </div>
+
+
+
+  <div *ngFor="let item of dialogues1; let i = index"  > 
+    <div class="if" *ngIf="true1" > 
+      <div class="mesages__chats position"   >
+     
+        <span class= "mesages__chat__right  "  >  {{  item[0]  }}   </span>  
+        <span class="dater" >   {{  item[1]  }}   </span>  
+   </div>
+      <div class="mesages__chats  "  >
+      
+        <span class= "mesages__chat__left"  > {{  item[2]  }}    </span>  
+        <span class="datel" >   {{  item[3]  }}  </span>  
+       
+   </div>
+  
+
+</div>
+</div>
+
+  <!--  -->
+  <div *ngFor="let item of dialogues2; let i = index"  > 
+    <div class="if" *ngIf="true2" > 
+      <div class="mesages__chats position"   >
+     
+        <span class= "mesages__chat__right  "  >  {{  item[0]  }}   </span>  
+        <span class="dater" >   {{  item[1]  }}   </span>  
+   </div>
+      <div class="mesages__chats  "  >
+      
+        <span class= "mesages__chat__left"  > {{  item[2]  }}    </span>  
+        <span class="datel" >   {{  item[3]  }}  </span>  
+       
+   </div>
+  
+
+</div>
+</div>
+<!--  -->
+<div *ngFor="let item of dialogues3; let i = index"  > 
+  <div class="if" *ngIf="true3" > 
+    <div class="mesages__chats position"   >
+   
+      <span class= "mesages__chat__right  "  >  {{  item[0]  }}   </span>  
+      <span class="dater" >   {{  item[1]  }}   </span>  
+ </div>
+    <div class="mesages__chats  "  >
+    
+      <span class= "mesages__chat__left"  > {{  item[2]  }}    </span>  
+      <span class="datel" >   {{  item[3]  }}  </span>  
+     
+ </div>
+
+
+</div>
+</div>
+<!--  -->
+<div *ngFor="let item of dialogues4; let i = index"  > 
+  <div class="if" *ngIf="true4" > 
+    <div class="mesages__chats position"   >
+   
+      <span class= "mesages__chat__right  "  >  {{  item[0]  }}   </span>  
+      <span class="dater" >   {{  item[1]  }}   </span>  
+ </div>
+    <div class="mesages__chats  "  >
+    
+      <span class= "mesages__chat__left"  > {{  item[2]  }}    </span>  
+      <span class="datel" >   {{  item[3]  }}  </span>  
+     
+ </div>
+
+
+</div>
+</div>
+ 
+<!-- !!!!!!! -->
+            </div>
+         
+          
+         <div class="user__input">
+           
+          <input type="text" placeholder="Type your message here..." (keydown.enter) = addingMessage($event.target.value) #inputValue>
+          
+          <i class="user__input___send"><img src="../../../assets/images/send.png" alt="send" (click)= addingMessage(inputValue.value) ></i>
+        </div>
+              
+             
+           
+         </div>
+      
+
+
+
+
+<!--  -->
+         
+<!--  -->
+
+  
+     </main>
+   </div>
+
+
+ </div>
